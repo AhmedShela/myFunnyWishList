@@ -4,6 +4,9 @@ th, td{
     font-family: 'Roboto', sans-serif;
     
 }
+th{
+    background-color: #e12e5b;
+}
 #divMain{
     display: flex;
     margin-top: 20px;
