@@ -11,18 +11,18 @@ var container = document.getElementById('divResult');
 var btn = document.getElementById('btnSubmit');
 var tbl = document.getElementById('ResultTBL');
 container.appendChild(tbl)
-var headRow = document.createElement('tr');
-tbl.appendChild(headRow);
+// var headRow = document.createElement('tr');
+// tbl.appendChild(headRow);
 
-var hd1 = document.createElement('th')
-headRow.appendChild(hd1)
-var hd2 = document.createElement('th')
-headRow.appendChild(hd2)
-var hd3 = document.createElement('th')
-headRow.appendChild(hd3)
-hd1.textContent = 'Wish Title';
-hd2.textContent = 'Expected Date';
-hd3.textContent = 'your wish will come true after';
+// var hd1 = document.createElement('th')
+// headRow.appendChild(hd1)
+// var hd2 = document.createElement('th')
+// headRow.appendChild(hd2)
+// var hd3 = document.createElement('th')
+// headRow.appendChild(hd3)
+// hd1.textContent = 'Wish Title';
+// hd2.textContent = 'Expected Date';
+// hd3.textContent = 'your wish will come true after';
 
 btn.addEventListener('click',handleSubmit);
 function handleSubmit(event){
@@ -35,6 +35,19 @@ renderWishs()
 }
 function renderWishs(){
     var wishArr = [];
+    tbl.innerHTML = "";
+    var headRow = document.createElement('tr');
+tbl.appendChild(headRow);
+
+var hd1 = document.createElement('th')
+headRow.appendChild(hd1)
+var hd2 = document.createElement('th')
+headRow.appendChild(hd2)
+var hd3 = document.createElement('th')
+headRow.appendChild(hd3)
+hd1.textContent = 'Wish Title';
+hd2.textContent = 'Expected Date';
+hd3.textContent = 'your wish will come true after';
     wishArr = JSON.parse(localStorage.getItem('wishs'));
     console.log(wishArr);
     if (wishArr){
